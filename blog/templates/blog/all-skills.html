@@ -14,11 +14,9 @@
   <section id="all-posts">
     <h2></h2>
     <ul>
-      {% include 'blog/includes/post.html' %}
-      {% include 'blog/includes/post.html' %}
-      {% include 'blog/includes/post.html' %}
-      {% include 'blog/includes/post.html' %}
-      {% include 'blog/includes/post.html' %}
+      {% for skill in skills %}
+        {% include 'blog/includes/skill.html' %}
+      {% endfor %}
     </ul>
   </section>
 {% endblock %}
