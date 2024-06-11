@@ -21,11 +21,9 @@
   <section id="latest-posts">
     <h2>My Skills</h2>
     <ul>
-      {% include 'blog/includes/post.html' %}
-      {% include 'blog/includes/post.html' %}
-      {% include 'blog/includes/post.html' %}
-      {% include 'blog/includes/post.html' %}
-      {% include 'blog/includes/post.html' %}
+      {% for skill in skills %}
+        {% include 'blog/includes/post.html' %}
+      {% endfor %}
     </ul>
   </section>
 
