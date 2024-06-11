@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Hi I'm Anthoner!
+{% endblock %}
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static 'blog/post.css' %}" />
+  <link rel="stylesheet" href="{% static 'blog/index.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <section id="welcome">
+    <header>
+      <img src="{% static 'blog/images/ner.jpg' %}" alt="Ner the Author Of this Page" />
+      <h2>Hi I'm Anthoner!</h2>
+    </header>
+    <p>Versatile and creative senior software engineer with 20 years of experience participating in all project lifecycle phases in various Agile or Waterfall environments.</p>
+  </section>
+  <section id="latest-posts">
+    <h2>My Skills</h2>
+    <ul>
+      {% include 'blog/includes/post.html' %}
+      {% include 'blog/includes/post.html' %}
+      {% include 'blog/includes/post.html' %}
+      {% include 'blog/includes/post.html' %}
+      {% include 'blog/includes/post.html' %}
+    </ul>
+  </section>
+
+  <section id="about">
+    <h2>What do I do</h2>
+    <p>I am a senior software engineer with 20 years of experience in web and desktop application development. My extensive expertise in various technologies and methodologies enables me to deliver robust, scalable, and user-friendly solutions tailored to meet client needs.</p>
+    <p>With a strong foundation in web development, I am proficient in using modern frameworks and languages such as HTML, CSS, JavaScript, and the CakePHP framework for PHP. My desktop application development skills include extensive experience with platforms like C#.NET and Delphi. Additionally, I have basic knowledge of Django, the MERN stack (MongoDB, Express, React, Node.js), and React.js, which broadens my capability to handle a wide range of development projects.</p>
+    <p>Throughout my career, I have successfully managed various phases of the software development lifecycle in both Agile and Waterfall environments. From initial requirement gathering and system design to development, testing, and deployment, I bring a comprehensive and adaptable approach to each project. My experience spans diverse industries, allowing me to understand and address unique client requirements effectively.</p>
+    <p>In addition to my proficiency with programming, I have over 25 years of experience in video editing, I am proficient in using Adobe Premiere and Adobe After Effects to create stunning visual content. My expertise spans various projects and styles, ensuring high-quality results for any video production needs. I am committed to staying up-to-date with the latest advancements in Adobe Premiere and After Effects, continuously learning new techniques and features to enhance my editing skills. This dedication ensures that my work remains cutting-edge and innovative. In addition to my proficiency with Adobe tools, I am also skilled in using CapCut for quick and efficient editing tasks. This versatility allows me to tackle projects of varying complexity and deliver high-quality results promptly.</p>
+  </section>
+{% endblock %}
