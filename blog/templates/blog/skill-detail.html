@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  This POst Title
+{% endblock %}
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static 'blog/post-detail.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <section id="summary">
+    <h2>Django</h2>
+    <article>
+      <img src="{% static 'blog/images/Django.png' %}" alt="Skill Title" />
+      <address>By Ner</address>
+      <div>
+        Last update on <time>June 11</time>
+      </div>
+    </article>
+  </section>
+
+  <main>
+    <p>Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source.</p>
+  </main>
+{% endblock %}

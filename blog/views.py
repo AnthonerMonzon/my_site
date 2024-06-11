@@ -8,5 +8,5 @@ def starting_page(request):
 def posts(request):
     return render(request, "blog/all-skills.html")
 
-def post_details(request):
-    pass
+def post_details(request, slug):
+    return render(request, "blog/skill-detail.html")
