@@ -2,7 +2,7 @@
 <li>
   <article class="post">
     <a href="{% url 'post-details-page' skill.slug %}">
-      <img src="{% static 'blog/images/'|add:skill.image %}" alt="{{ skill.title}}" />
+      <img src="{% static 'blog/images/'|add:skill.image_name %}" alt="{{ skill.title}}" />
       <div class="post__content">
         <h2>{{ skill.title }}</h2>
         <p>{{ skill.excerpt }}</p>

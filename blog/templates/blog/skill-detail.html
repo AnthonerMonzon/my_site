@@ -12,9 +12,14 @@
 {% block content %}
   <section id="summary">
     <h2>{{ skill.title }}</h2>
+    <div>
+      {% for tag in skill_tags %}
+      <span class="tag">{{ tag.caption }}</span>
+      {% endfor %}
+    </div>
     <article>
-      <img src="{% static 'blog/images/'|add:skill.image %}" alt="Skill Title" />
-      <address>By {{ skill.author|title }}</address>
+      <img src="{% static 'blog/images/'|add:skill.image_name %}" alt="Skill Title" />
+      <address>By <a href="mailto:{{ skill.author.email_address }}"> {{ skill.author|title }} </a></address>
       <div>
         Last update on <time>{{ skill.date|date:"d M Y" }}</time>
       </div>
